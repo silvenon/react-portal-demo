@@ -53,6 +53,7 @@
     "watchify": "^3.2.3"
   },
   "dependencies": {
+    "closest": "0.0.1",
     "es6-promise": "^2.3.0",
     "fontfaceobserver": "^1.5.0",
     "react": "^0.13.3",

@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import loadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
+import autoprefixer from 'autoprefixer-core';
 
 const $ = loadPlugins();
 const bs = browserSync.create();
@@ -30,7 +31,7 @@ function bundle() {
     .pipe(source('bundle.js'))
     .pipe(gulp.dest('.tmp/scripts'))
     .pipe(bs.stream({once: true}));
-};
+}
 
 gulp.task('scripts', bundle);
 b.on('update', bundle);
