@@ -6,7 +6,5 @@ before(() => {
   global.document = jsdom.jsdom('<!DOCTYPE html><html><head></head><body></body></html>');
   global.window = global.document.parentWindow;
   global.Element = window.Element;
-  global.navigator = {userAgent: 'node.js'};
-  // shim document.classList
-  require('../vendor/classList')(global.window);
+  global.navigator = window.navigator;
 });

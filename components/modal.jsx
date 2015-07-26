@@ -1,6 +1,5 @@
 import React from 'react/addons';
 import closest from 'closest';
-import Close from './close';
 
 export default React.createClass({
   propTypes: {
@@ -40,12 +39,10 @@ export default React.createClass({
 
   componentDidMount() {
     document.body.addEventListener('keydown', this.handleEsc);
-    document.body.classList.add('modal-open');
   },
 
   componentWillUnmount() {
     document.body.removeEventListener('keydown', this.handleEsc);
-    document.body.classList.remove('modal-open');
   },
 
   render() {
@@ -69,7 +66,6 @@ export default React.createClass({
               <h3 ref="title" className="modal-title">
                 {this.props.title}
               </h3>
-              <Close onClick={this.handleClose} />
             </div>
 
             <div className="modal-body">
